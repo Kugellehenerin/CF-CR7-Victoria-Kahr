@@ -1,0 +1,21 @@
+<br>
+
+<h2>Travel</h2>
+
+<hr>
+
+<div *ngFor="let travel of travels ; index as travelId">
+
+
+    <h2>{{ travel.destination }} </h2>
+    <p>Start: {{ travel.start }}</p>
+    <p>Weeks: {{ travel.duration }}</p>
+    <p>Description: {{ travel.description }}</p>
+    <p>Price: {{ travel.price | currency }}</p>
+    <h4>
+        <a [routerLink]="['/travels', travelId]">
+             {{ travel.more }}
+        </a>
+    </h4>
+    <hr>
+</div>

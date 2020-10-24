@@ -1,0 +1,11 @@
+<div *ngIf="travel" class="alert alert-primary">
+
+    <h2>{{ travel.destination }} </h2>
+    <p>Start: {{ travel.start }}</p>
+    <p>Weeks: {{ travel.duration }}</p>
+    <p>Description: {{ travel.description }}</p>
+    <p>Price: {{ travel.price | currency }}</p>
+
+    <button (click)="addToCart(travel)">Buy</button>
+
+</div>
